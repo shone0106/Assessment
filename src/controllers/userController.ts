@@ -73,7 +73,12 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
             statusCode: 200,
             data:{
                 jwt: accessToken,
-                user
+                user: {
+                    id: user._id,
+                    email: user.email,
+                    name: user.name,
+                    age: user.age
+                }
             },
             message: "Login successful"      
         })
