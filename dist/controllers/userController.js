@@ -73,7 +73,8 @@ const login = (req, res, next) => __awaiter(void 0, void 0, void 0, function* ()
         res.status(200).json({
             statusCode: 200,
             data: {
-                jwt: accessToken
+                jwt: accessToken,
+                user
             },
             message: "Login successful"
         });
